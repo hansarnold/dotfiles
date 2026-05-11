@@ -7,10 +7,13 @@ keybind = cmd+left=text:\x1bOH
 keybind = cmd+right=text:\x1bOF
 keybind = cmd+backspace=text:\x15
 
+# Clipboard
+keybind = cmd+c=copy_to_clipboard
+keybind = cmd+v=paste_from_clipboard
+
 # Tabs
 keybind = cmd+t=new_tab
 keybind = cmd+w=close_tab:this
-keybind = cmd+c=close_surface
 keybind = cmd+bracket_left=previous_tab
 keybind = cmd+bracket_right=next_tab
 keybind = cmd+0=prompt_surface_title
