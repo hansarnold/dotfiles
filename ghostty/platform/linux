@@ -1,0 +1,27 @@
+# Linux-specific Ghostty settings.
+command = /usr/bin/fish
+shell-integration = fish
+
+# Navigation
+keybind = alt+left=text:\x1bOH
+keybind = alt+right=text:\x1bOF
+keybind = alt+backspace=text:\x15
+
+# Tabs
+keybind = alt+t=new_tab
+keybind = alt+w=close_tab:this
+keybind = alt+c=close_surface
+keybind = alt+bracket_left=previous_tab
+keybind = alt+bracket_right=next_tab
+keybind = alt+0=prompt_surface_title
+
+# Windows and splits
+keybind = alt+n=new_window
+keybind = alt+backslash=new_split:right
+keybind = alt+ctrl+backslash=new_split:down
+keybind = alt+ctrl+h=goto_split:left
+keybind = alt+ctrl+l=goto_split:right
+keybind = alt+ctrl+k=goto_split:up
+keybind = alt+ctrl+j=goto_split:down
+keybind = alt+enter=toggle_split_zoom
+keybind = alt+ctrl+r=equalize_splits
