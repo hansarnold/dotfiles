@@ -1,6 +1,9 @@
 # Linux-specific Ghostty settings.
 command = /usr/bin/fish
 shell-integration = fish
+font-size = 22
+window-width = 9999
+window-height = 9999
 
 # Navigation
 keybind = alt+left=text:\x1bOH
