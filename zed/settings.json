@@ -8,7 +8,23 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+      "env": {
+        "HTTP_PROXY": "http://127.0.0.1:19877",
+        "HTTPS_PROXY": "http://127.0.0.1:19877",
+        "ALL_PROXY": "http://127.0.0.1:19877",
+        "http_proxy": "http://127.0.0.1:19877",
+        "https_proxy": "http://127.0.0.1:19877",
+        "all_proxy": "http://127.0.0.1:19877",
+        "NO_PROXY": "localhost,127.0.0.1,::1",
+        "no_proxy": "localhost,127.0.0.1,::1"
+      }
+    }
+  },
   "agent": {
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "gpt-5.1"
@@ -21,7 +37,7 @@
     "dock": "left"
   },
   "base_keymap": "VSCode",
-  "theme": "Catppuccin Frappé",
+  "theme": "Catppuccin Mocha",
   "ui_font_family": "ComicShannsMono Nerd Font Mono",
   "ui_font_size": 25.0,
   "buffer_font_size": 25.0,
@@ -141,6 +157,7 @@
   "notification_panel": {
     "dock": "left"
   },
+  "proxy": "http://127.0.0.1:19877",
 
   "edit_predictions": {
     // Add Markdown files to the disabled list
