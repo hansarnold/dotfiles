@@ -4,10 +4,6 @@
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
-      // Git
-      "space g h d": "editor::ToggleSelectedDiffHunks",
-      "space g s": "git_panel::ToggleFocus",
-
       // Toggle inlay hints
       "space t i": "editor::ToggleInlayHints",
 
@@ -24,8 +20,6 @@
       // Open recent project
       "space r p": "projects::OpenRecent",
 
-      // Go to file with `gf`
-      "g f": "editor::OpenExcerpts",
     },
   },
   {
@@ -52,18 +46,8 @@
       "g r": "editor::FindAllReferences",
       "] d": "editor::GoToDiagnostic",
       "[ d": "editor::GoToPreviousDiagnostic",
-      // TODO: Go to next/prev error
-      "] e": "editor::GoToDiagnostic",
-      "[ e": "editor::GoToPreviousDiagnostic",
       // Diagnostic
       "space x x": "diagnostics::Deploy",
-
-      // +Git
-      // Git prev/next hunk
-      "] h": "editor::GoToHunk",
-      "[ h": "editor::GoToPreviousHunk",
-
-      // TODO: git diff is not ready yet, refer https://github.com/zed-industries/zed/issues/8665#issuecomment-2194000497
 
       // + Buffers
       // Switch between buffers
@@ -93,35 +77,11 @@
       "space f p": "projects::OpenRecent",
     },
   },
-  // Comment code
-  {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-    "bindings": {
-      // visual, visual line & visual block modes
-      "g c": "editor::ToggleComments",
-    },
-  },
   // Better escape
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
       "j j": "vim::NormalBefore", // remap jj in insert mode to escape
-    },
-  },
-  // Rename
-  {
-    "context": "Editor && vim_operator == c",
-    "bindings": {
-      "c": "vim::CurrentLine",
-      "r": "editor::Rename", // zed specific
-    },
-  },
-  // Code Action
-  {
-    "context": "Editor && vim_operator == c",
-    "bindings": {
-      "c": "vim::CurrentLine",
-      "a": "editor::ToggleCodeActions", // zed specific
     },
   },
   // Toggle terminal
@@ -151,9 +111,8 @@
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
-      // Close project panel as project file panel on the right
-      "q": "workspace::ToggleRightDock",
-      "space e": "workspace::ToggleRightDock",
+      // Close the project panel with the same shortcut used to open it
+      "space e": "project_panel::ToggleFocus",
       // Navigate between panel
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -172,17 +131,10 @@
     },
   },
   {
-    "context": "Workspace",
-    "bindings": {
-      // Map VSCode like keybindings
-      "cmd-b": "workspace::ToggleRightDock",
-    },
-  },
-  {
     "context": "MarkdownPreview",
     "bindings": {
-      "ctrl-f": "markdown::MovePageDown",
-      "ctrl-b": "markdown::MovePageUp",
+      "ctrl-f": "markdown::ScrollPageDown",
+      "ctrl-b": "markdown::ScrollPageUp",
     },
   },
 ]

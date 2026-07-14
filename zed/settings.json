@@ -8,6 +8,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
   "agent_servers": {
     "codex-acp": {
       "type": "registry",
@@ -33,11 +38,12 @@
   },
   "agent_ui_font_size": 25.0,
   "agent_buffer_font_size": 25.0,
-  "git_panel": {
-    "dock": "left"
-  },
   "base_keymap": "VSCode",
-  "theme": "Catppuccin Mocha",
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark"
+  },
   "ui_font_family": "ComicShannsMono Nerd Font Mono",
   "ui_font_size": 25.0,
   "buffer_font_size": 25.0,
@@ -46,7 +52,7 @@
   // Vim mode settings
   "vim_mode": true,
   // use relative line numbers
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "tab_bar": {
     "show": true
   },
@@ -80,26 +86,6 @@
   // Inlay hints preconfigured by Zed: Go, Rust, Typescript and Svelte
   "inlay_hints": {
     "enabled": true
-  },
-  // LSP
-  "lsp": {
-    "tailwindcss-language-server": {
-      "settings": {
-        "classAttributes": ["class", "className", "ngClass", "styles"]
-      }
-    }
-  },
-  "languages": {
-    // Refer https://zed.dev/docs/languages/javascript and https://zed.dev/docs/languages/typescript for more info
-    "TypeScript": {
-      // Refer https://github.com/jellydn/ts-inlay-hints for how to setup for Neovim and VSCode
-      "inlay_hints": {
-        "enabled": true,
-        "show_parameter_hints": false,
-        "show_other_hints": true,
-        "show_type_hints": true
-      }
-    }
   },
   // Use zed commit editor
   "terminal": {
@@ -141,20 +127,13 @@
     "diagnostics": false,
     "metrics": false
   },
-  // Move all panel to the right
   "project_panel": {
-    "button": true,
-    "dock": "left",
-    "git_status": true
+    "dock": "left"
   },
   "outline_panel": {
     "dock": "left"
   },
   "collaboration_panel": {
-    "dock": "left"
-  },
-  // Move some unnecessary panels to the left
-  "notification_panel": {
     "dock": "left"
   },
   "proxy": "http://127.0.0.1:19877",
