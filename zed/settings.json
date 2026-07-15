@@ -87,6 +87,55 @@
   "inlay_hints": {
     "enabled": true
   },
+  // Python: basedpyright provides semantic features; Ruff handles linting and formatting
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        // Ruff is the single source of truth for import organization
+        "basedpyright.disableOrganizeImports": true,
+        "basedpyright.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "standard",
+          "autoImportCompletions": true,
+          "autoSearchPaths": true,
+          "useLibraryCodeForTypes": true,
+          "autoFormatStrings": true,
+          "inlayHints": {
+            "variableTypes": true,
+            "callArgumentNames": true,
+            "callArgumentNamesMatching": false,
+            "functionReturnTypes": true,
+            "genericTypes": true
+          }
+        }
+      }
+    },
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          // Prefer each project's pyproject.toml or ruff.toml when present
+          "configurationPreference": "filesystemFirst",
+          "fixAll": true,
+          "organizeImports": true
+        }
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["basedpyright", "ruff"],
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.ruff": true,
+        "source.organizeImports.ruff": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      }
+    }
+  },
   // Use zed commit editor
   "terminal": {
     "env": {

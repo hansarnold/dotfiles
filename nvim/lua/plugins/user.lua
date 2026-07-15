@@ -1,5 +1,16 @@
 ---@type LazySpec
 return {
+  -- Use <Space><Space> as a shorter alias for <Space>ff (find files)
+  {
+    "AstroNvim/astrocore",
+    opts = {
+      mappings = {
+        n = {
+          ["<Leader><Leader>"] = { "<Leader>ff", remap = true, desc = "Find files" },
+        },
+      },
+    },
+  },
   -- Override gitsigns plugin options
   {
     "lewis6991/gitsigns.nvim",
