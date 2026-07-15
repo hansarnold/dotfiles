@@ -22,9 +22,5 @@ keybind = alt+0=prompt_surface_title
 keybind = alt+n=new_window
 keybind = alt+backslash=new_split:right
 keybind = alt+ctrl+backslash=new_split:down
-keybind = alt+ctrl+h=goto_split:left
-keybind = alt+ctrl+l=goto_split:right
-keybind = alt+ctrl+k=goto_split:up
-keybind = alt+ctrl+j=goto_split:down
 keybind = alt+enter=toggle_split_zoom
 keybind = alt+ctrl+r=equalize_splits
