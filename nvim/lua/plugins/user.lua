@@ -25,4 +25,29 @@ return {
       exclude_filetypes = { "toml" },
     },
   },
+  -- Open PDFs as plain binary buffers instead of previewing them with
+  -- snacks.image: PDF conversion requires ghostscript, and without it every
+  -- PDF opened with a "Conversion failed" error and a modified buffer.
+  {
+    "folke/snacks.nvim",
+    opts = function(_, opts)
+      opts.image = opts.image or {}
+      opts.image.formats = {
+        "png",
+        "jpg",
+        "jpeg",
+        "gif",
+        "bmp",
+        "webp",
+        "tiff",
+        "heic",
+        "avif",
+        "mp4",
+        "mov",
+        "avi",
+        "mkv",
+        "webm",
+      }
+    end,
+  },
 }
