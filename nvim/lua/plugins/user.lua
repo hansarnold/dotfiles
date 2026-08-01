@@ -25,6 +25,15 @@ return {
       exclude_filetypes = { "toml" },
     },
   },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {
+      latex = { enabled = false },
+    },
+    keys = {
+      { "<Leader>mr", "<cmd>RenderMarkdown toggle<cr>", desc = "Toggle Markdown render" },
+    },
+  },
   -- Open PDFs as plain binary buffers instead of previewing them with
   -- snacks.image: PDF conversion requires ghostscript, and without it every
   -- PDF opened with a "Conversion failed" error and a modified buffer.
