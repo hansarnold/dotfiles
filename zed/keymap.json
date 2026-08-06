@@ -111,6 +111,8 @@
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
+      // Nvim-style: toggle directories or open files in a permanent buffer
+      "l": "project_panel::OpenPermanent",
       // Close the project panel with the same shortcut used to open it
       "space e": "project_panel::ToggleFocus",
       // Navigate between panel
