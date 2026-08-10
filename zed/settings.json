@@ -75,7 +75,7 @@
     "right_padding": 0.15
   },
   // Keep Markdown previews wide enough for technical documentation and code blocks.
-  "markdown_preview_font_size": 20.0,
+  "markdown_preview_font_size": 25.0,
   "markdown_preview": {
     "limit_content_width": true,
     "max_width": 1400
