@@ -6,6 +6,7 @@ CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 BACKUP_SUFFIX="$(date +%Y%m%d%H%M%S)"
 
 configs=(
+  fish
   ghostty
   kitty
   nvim

@@ -1,0 +1,4 @@
+# Universal variables and temporary files belong to this machine.
+/fish_variables*
+/fish_history
+/.codex
