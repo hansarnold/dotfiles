@@ -11,6 +11,7 @@ return {
       ensure_installed = {
         -- install language servers
         "lua-language-server",
+        "rust-analyzer", -- Rust LSP, also available when rustup lacks this component
         "neocmakelsp", -- CMake LSP
 
         -- install formatters
