@@ -4,7 +4,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Hyper + YUIOP (Window Management & Focus)",
+                        "description": "Hyper + YUIOP / R / C (Window Management & Focus)",
                         "manipulators": [
                             {
                                 "description": "Hyper + Y -> Split Left (Ctrl + Fn + Left)",
@@ -49,6 +49,34 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Hyper + R -> Restore Previous Size (Ctrl + Fn + R)",
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": ["left_control", "fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Hyper + C -> Center Window (Ctrl + Fn + C)",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "c",
+                                        "modifiers": ["left_control", "fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
                                 "description": "Hyper + I -> Focus Next Window (Ctrl + Fn + F4)",
                                 "from": {
                                     "key_code": "i",
@@ -72,6 +100,26 @@
                                     {
                                         "key_code": "f4",
                                         "modifiers": ["left_control", "left_shift", "fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper + D (Accessibility Zoom)",
+                        "manipulators": [
+                            {
+                                "description": "Hyper + D -> Toggle Zoom (Option + Command + 8)",
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "8",
+                                        "modifiers": ["left_option", "left_command"],
+                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
