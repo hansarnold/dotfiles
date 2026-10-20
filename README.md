@@ -5,6 +5,7 @@ Personal configuration files for Linux desktop and terminal tools.
 ## Included Configs
 
 - `ghostty`: Ghostty terminal settings, split into common config plus macOS/Linux overlays.
+- `nav`: macOS/Linux keyboard navigation mappings and GNOME screenshot shortcuts.
 - `nvim`: Neovim configuration based on AstroNvim.
 - `tmux`: tmux config split into `conf.d` modules, with a plugin manager helper.
 - `yazi`: Yazi theme and flavor configuration.
@@ -29,6 +30,60 @@ To update only Ghostty without touching other configs:
 ```bash
 ./bootstrap.sh ghostty
 ```
+
+## Linux nav (Caps Lock layer)
+
+On GNOME with keyd and Ubuntu Tiling Assistant enabled, run:
+
+```bash
+/usr/bin/python3 nav/gnome/nav-shortcuts.py
+sudo bash nav/keyd/install.sh
+```
+
+Tap `Caps Lock` for Escape, or hold it and press the keys below. The positions
+match the macOS Karabiner nav configuration:
+
+| Key | GNOME action |
+| --- | --- |
+| `H` / `L` | Previous / next workspace |
+| `J` | Switch between windows of the current application |
+| `K` | Toggle the Activities overview |
+| `Y` / `O` | Tile to the left / right half |
+| `U` / `I` | Focus the previous / next window |
+| `P` | Maximize / restore |
+| `R` | Restore the size before tiling or maximizing |
+| `C` | Center the window on its current monitor |
+| `D` | Toggle GNOME accessibility zoom (without key repeat) |
+| `Space` | Backspace |
+
+GNOME's same-application window switcher substitutes for macOS App Exposé on `J`.
+`C` moves a normal or tiled window without resizing it; use `R` first to restore
+a maximized window before centering it. Existing GNOME shortcuts are preserved.
+The scripts back up changed GNOME settings under `~/.local/state/dotfiles/backups`
+(or `$XDG_STATE_HOME/dotfiles/backups`) and the existing keyd configuration beside
+`/etc/keyd/default.conf` before replacing it. Both scripts may be run repeatedly.
+They are separate from `bootstrap.sh`, since keyd requires a system-level install.
+The keyd installer restarts the service to avoid the
+[keyd 2.6.0 reload crash](https://github.com/rvaiya/keyd/issues/1320).
+
+## GNOME screenshot shortcuts
+
+Run this separately inside your GNOME desktop session (requires Flameshot and the
+system Python's PyGObject package, `python3-gi` on Ubuntu):
+
+```bash
+/usr/bin/python3 nav/gnome/screenshot-shortcuts.py
+```
+
+- `Alt+Shift+4`: Run `flameshot gui` to select and annotate a region.
+- `Alt+Shift+5`: Open the GNOME screenshot panel. Press `W` or click **Window**, then
+  choose a window and press `Enter` to capture it. GNOME saves the image to
+  `Pictures/Screenshots` and copies it to the clipboard.
+
+Flameshot 13.3 does not have a native window picker, so window selection uses
+GNOME's built-in panel. These settings live in GNOME's gsettings/dconf database;
+they are not configuration symlinks managed by `bootstrap.sh`. The script
+preserves other custom shortcuts and existing screenshot panel bindings.
 
 ## Update
 
