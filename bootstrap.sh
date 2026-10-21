@@ -7,6 +7,7 @@ BACKUP_SUFFIX="$(date +%Y%m%d%H%M%S)"
 
 configs=(
   ghostty
+  herdr
   kitty
   nvim
   tmux
@@ -76,6 +77,7 @@ link_config() {
   fi
 
   printf 'link: %s -> %s\n' "$target" "$source"
+  mkdir -p "$(dirname "$target")"
   ln -s "$source" "$target"
 }
 
@@ -165,7 +167,12 @@ for config in "${configs[@]}"; do
     continue
   fi
 
-  link_config "$config"
+  if [[ "$config" == "herdr" ]]; then
+    # Keep Herdr's sessions, sockets, logs, and plugins machine-local.
+    link_config "$config/config.toml"
+  else
+    link_config "$config"
+  fi
 
   if [[ "$config" == "ghostty" ]]; then
     configure_ghostty_platform
