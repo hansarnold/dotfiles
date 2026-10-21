@@ -1,0 +1,38 @@
+onboarding = false
+
+[ui.toast]
+delivery = "system"
+
+[theme]
+name = "tokyo-night-day"
+auto_switch = false
+
+[ui]
+status_indicators = "dots"
+
+[terminal]
+default_shell = "/usr/bin/fish"
+
+[keys]
+# tmux-style keys, using tabs without pane splitting.
+prefix = "ctrl+a"
+help = "prefix+?"
+reload_config = "prefix+r"
+
+# tmux windows map to Herdr tabs.
+new_tab = "prefix+c"
+rename_tab = "prefix+comma"
+close_tab = "prefix+ampersand"
+previous_tab = ["prefix+ctrl+h", "prefix+p"]
+next_tab = ["prefix+ctrl+l", "prefix+n"]
+switch_tab = "prefix+1..9"
+
+# Navigate workspaces and terminals, or detach while keeping them running.
+goto = "prefix+space"
+workspace_picker = "prefix+w"
+detach = "prefix+d"
+
+# No pane splitting; free prefix+r for reloading the config.
+split_vertical = ""
+split_horizontal = ""
+resize_mode = ""
