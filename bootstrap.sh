@@ -6,6 +6,7 @@ CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 BACKUP_SUFFIX="$(date +%Y%m%d%H%M%S)"
 
 configs=(
+  fish
   ghostty
   herdr
   kitty
@@ -167,7 +168,10 @@ for config in "${configs[@]}"; do
     continue
   fi
 
-  if [[ "$config" == "herdr" ]]; then
+  if [[ "$config" == "fish" ]]; then
+    # Share the shortcut without replacing machine-local fish configuration.
+    link_config "$config/functions/h.fish"
+  elif [[ "$config" == "herdr" ]]; then
     # Keep Herdr's sessions, sockets, logs, and plugins machine-local.
     link_config "$config/config.toml"
   else
