@@ -4,11 +4,11 @@ onboarding = false
 delivery = "system"
 
 [theme]
-name = "tokyo-night-day"
+name = "dracula"
 auto_switch = false
 
 [ui]
-status_indicators = "dots"
+status_indicators = "symbols"
 
 [terminal]
 default_shell = "/usr/bin/fish"
@@ -28,8 +28,8 @@ next_tab = ["prefix+ctrl+l", "prefix+n"]
 switch_tab = "prefix+1..9"
 
 # Navigate workspaces and terminals, or detach while keeping them running.
-goto = "prefix+space"
-workspace_picker = "prefix+w"
+goto = ["prefix+w", "prefix+space"]
+workspace_picker = "prefix+g"
 detach = "prefix+d"
 
 # No pane splitting; free prefix+r for reloading the config.
