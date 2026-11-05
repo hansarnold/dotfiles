@@ -1,0 +1,6 @@
+[open]
+prepend_rules = [
+  { url = "*.{html,htm,xhtml}", use = [ "open", "edit", "reveal" ] },
+  { mime = "text/html", use = [ "open", "edit", "reveal" ] },
+  { mime = "application/xhtml+xml", use = [ "open", "edit", "reveal" ] },
+]
