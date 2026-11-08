@@ -5,12 +5,13 @@ Personal configuration files for Linux desktop and terminal tools.
 ## Included Configs
 
 - `ghostty`: Ghostty terminal settings, split into common config plus macOS/Linux overlays.
+- `kitty`: Kitty terminal settings mirrored from Ghostty (font, theme, keybindings).
 - `nvim`: Neovim configuration based on AstroNvim.
 - `tmux`: tmux config split into `conf.d` modules, with a plugin manager helper.
 - `yazi`: Yazi theme and flavor configuration.
 - `zed`: Zed editor settings and keybindings.
 
-`kitty` and `wezterm` are present as placeholders only and are skipped by the bootstrap script until real config files are added.
+`wezterm` is present as a placeholder only and is skipped by the bootstrap script until real config files are added.
 
 ## Install
 
