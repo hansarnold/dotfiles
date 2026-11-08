@@ -7,13 +7,14 @@ Personal configuration files for Linux desktop and terminal tools.
 - `fish`: Fish helper functions; `h` launches or attaches to Herdr.
 - `ghostty`: Ghostty terminal settings, split into common config plus macOS/Linux overlays.
 - `herdr`: Herdr settings with fish and tmux-style tab shortcuts, without pane splitting.
+- `kitty`: Kitty terminal settings mirrored from Ghostty (font, theme, keybindings).
 - `nav`: macOS/Linux keyboard navigation mappings and GNOME screenshot shortcuts.
 - `nvim`: Neovim configuration based on AstroNvim.
 - `tmux`: tmux config split into `conf.d` modules, with a plugin manager helper.
 - `yazi`: Yazi theme and flavor configuration.
 - `zed`: Zed editor settings and keybindings.
 
-`kitty` and `wezterm` are present as placeholders only and are skipped by the bootstrap script until real config files are added.
+`wezterm` is present as a placeholder only and is skipped by the bootstrap script until real config files are added.
 
 ## Install
 
