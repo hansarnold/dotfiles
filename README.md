@@ -7,7 +7,7 @@ Personal configuration files for Linux desktop and terminal tools.
 - `fish`: Fish helper functions; `h` launches or attaches to Herdr.
 - `ghostty`: Ghostty terminal settings, split into common config plus macOS/Linux overlays.
 - `herdr`: Herdr settings with fish and tmux-style tab shortcuts, without pane splitting.
-- `kitty`: Kitty terminal settings mirrored from Ghostty (font, theme, keybindings).
+- `kitty`: Kitty terminal settings with Tokyo Night theme and macOS/Linux overlays.
 - `nav`: macOS/Linux keyboard navigation mappings and GNOME screenshot shortcuts.
 - `nvim`: Neovim configuration based on AstroNvim.
 - `tmux`: tmux config split into `conf.d` modules, with a plugin manager helper.
@@ -33,6 +33,21 @@ To update only Ghostty without touching other configs:
 ```bash
 ./bootstrap.sh ghostty
 ```
+
+To install or update only Kitty:
+
+```bash
+./bootstrap.sh kitty
+```
+
+Kitty shares its theme, background image and common shortcuts across platforms.
+Bootstrap generates the ignored `kitty/platform.local` selector: macOS uses zsh,
+30 pt text and Cmd shortcuts; Linux uses fish, 22 pt text and Alt shortcuts.
+Install fish and ComicShannsMono Nerd Font Mono on Linux before launching Kitty.
+On Linux, use `Alt+T` for a tab, `Alt+W` to close a tab, `Alt+C` to close a pane,
+`Alt+[` / `Alt+]` to switch tabs, `Alt+Backslash` / `Alt+Ctrl+Backslash` to split,
+and `Alt+Ctrl+H/J/K/L` to move between panes. Clipboard shortcuts are
+`Ctrl+Shift+C/V`. Reload with `Ctrl+Shift+F5`; shell changes apply to new panes.
 
 To install or update Herdr and its fish shortcut:
 
