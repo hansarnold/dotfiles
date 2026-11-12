@@ -11,10 +11,9 @@ Personal configuration files for Linux desktop and terminal tools.
 - `nav`: macOS/Linux keyboard navigation mappings and GNOME screenshot shortcuts.
 - `nvim`: Neovim configuration based on AstroNvim.
 - `tmux`: tmux config split into `conf.d` modules, with a plugin manager helper.
+- `wezterm`: Windows WezTerm configuration with PowerShell and Ghostty-inspired shortcuts.
 - `yazi`: Yazi theme and flavor configuration.
 - `zed`: Zed editor settings and keybindings.
-
-`wezterm` is present as a placeholder only and is skipped by the bootstrap script until real config files are added.
 
 ## Install
 
@@ -25,6 +24,8 @@ Clone the repository into `~/.config/dotfiles`, then run:
 ```
 
 The script links each configured directory into `${XDG_CONFIG_HOME:-$HOME/.config}`. Fish links only `fish/functions/h.fish`, preserving local shell configuration. Herdr links only `herdr/config.toml`, keeping sessions, sockets, logs, and plugins machine-local. Existing files or directories are moved aside with a timestamped `.bak-*` suffix before links are created.
+
+WezTerm is configured for Windows and is skipped by bootstrap on macOS and Linux. On Windows, run `./bootstrap.sh wezterm` from Git Bash, or copy the contents of `wezterm/` to `C:/Users/<username>/.config/wezterm/`. Install ComicShannsMono Nerd Font for the configured font.
 
 Ghostty is split so the same repository can be shared across platforms. `ghostty/config` is the entry point, `ghostty/common` contains shared settings, `ghostty/platform/macos` uses zsh and macOS keybindings, and `ghostty/platform/linux` uses fish and Linux keybindings. During bootstrap, `ghostty/platform.local` is generated as an ignored machine-local selector for the current platform.
 

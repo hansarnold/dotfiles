@@ -174,6 +174,16 @@ for config in "${configs[@]}"; do
     continue
   fi
 
+  if [[ "$config" == "wezterm" ]]; then
+    case "$(uname -s)" in
+      MINGW* | MSYS* | CYGWIN*) ;;
+      *)
+        printf 'skip: wezterm config targets Windows only\n'
+        continue
+        ;;
+    esac
+  fi
+
   if [[ "$config" == "fish" ]]; then
     # Share the shortcut without replacing machine-local fish configuration.
     link_config "$config/functions/h.fish"
