@@ -6,7 +6,7 @@ Personal configuration files for Linux desktop and terminal tools.
 
 - `fish`: Fish helper functions; `h` launches or attaches to Herdr.
 - `ghostty`: Ghostty terminal settings, split into common config plus macOS/Linux overlays.
-- `herdr`: Herdr settings with fish and tmux-style tab shortcuts, without pane splitting.
+- `herdr`: Herdr settings with zsh and tmux-style tab shortcuts, without pane splitting.
 - `kitty`: Kitty terminal settings mirrored from Ghostty (font, theme, keybindings).
 - `nvim`: Neovim configuration based on AstroNvim.
 - `tmux`: tmux config split into `conf.d` modules, with a plugin manager helper.
@@ -45,8 +45,8 @@ Herdr uses `Ctrl+A` as its prefix, followed by `c` for a new tab,
 `Ctrl+H`/`Ctrl+L` (or `p`/`n`) to switch tabs, `,` to rename, `&` to close,
 `w` or `Space` for the terminal navigator, `g` for workspace navigation,
 `r` to reload config, and `d` to detach. Settings keep the default `prefix+s`.
-Pane splitting and resize shortcuts are disabled. The default shell is `fish`,
-resolved from `PATH` (`/usr/bin/fish` on Linux, Homebrew's fish on macOS).
+Pane splitting and resize shortcuts are disabled. On this macOS branch the default
+shell is `/bin/zsh`, so Oh My Zsh loads in every pane.
 After editing the config, run `herdr server reload-config` to apply it.
 
 ## Update

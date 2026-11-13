@@ -11,7 +11,7 @@ auto_switch = false
 status_indicators = "symbols"
 
 [terminal]
-default_shell = "fish"
+default_shell = "/bin/zsh"
 
 [keys]
 # tmux-style keys, using tabs without pane splitting.
