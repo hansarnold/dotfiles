@@ -45,8 +45,8 @@ Herdr uses `Ctrl+A` as its prefix, followed by `c` for a new tab,
 `Ctrl+H`/`Ctrl+L` (or `p`/`n`) to switch tabs, `,` to rename, `&` to close,
 `w` or `Space` for the terminal navigator, `g` for workspace navigation,
 `r` to reload config, and `d` to detach. Settings keep the default `prefix+s`.
-Pane splitting and resize shortcuts are disabled. The default shell is
-`/usr/bin/fish`; adjust `terminal.default_shell` if fish is installed elsewhere.
+Pane splitting and resize shortcuts are disabled. The default shell is `fish`,
+resolved from `PATH` (`/usr/bin/fish` on Linux, Homebrew's fish on macOS).
 After editing the config, run `herdr server reload-config` to apply it.
 
 ## Update
