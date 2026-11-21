@@ -1,6 +1,6 @@
 # macOS-specific Ghostty settings.
-command = /bin/zsh
-shell-integration = zsh
+command = /opt/homebrew/bin/fish
+shell-integration = fish
 
 # Navigation
 keybind = cmd+left=text:\x1bOH
