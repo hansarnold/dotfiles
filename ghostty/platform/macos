@@ -2,6 +2,10 @@
 command = /opt/homebrew/bin/fish
 shell-integration = fish
 
+# App (restored: common uses `keybind = clear`, which drops macOS defaults)
+keybind = cmd+q=quit
+keybind = cmd+shift+comma=reload_config
+
 # Navigation
 keybind = cmd+left=text:\x1bOH
 keybind = cmd+right=text:\x1bOF
